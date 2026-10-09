@@ -90,7 +90,6 @@ Tes photos du montage vont dans [`docs/photos/`](docs/photos/).
 Le capteur et l'écran sont sur **deux bus I2C séparés** (réglage `DEUX_BUS_I2C 1`), ce qui permet de tout brancher avec des connecteurs, sans soudure ni dérivation.
 Pour tout mettre sur un seul bus (D2/D1), passe `DEUX_BUS_I2C` à `0`.
 
-> ⚠️ Alimente le capteur en **3,3 V** et non en 5 V : les résistances de tirage I2C de la carte Adafruit sont reliées à son alimentation, et l'ESP8266 fonctionne en 3,3 V.
 
 Le bouton **FLASH** de la NodeMCU (D3) sert de bouton utilisateur. Sur une D1 mini, qui n'en a pas, un bouton poussoir entre D3 et GND fait la même chose.
 
