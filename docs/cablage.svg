@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 440" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+  <title>Schéma de câblage : PMSA003I et OLED sur ESP8266</title>
+  <rect width="900" height="440" rx="16" fill="#fbf8f2"/>
+  <g font-size="15">
+    <!-- Capteur -->
+    <rect x="40" y="70" width="190" height="290" rx="12" fill="#e1f5ee" stroke="#0f6e56" stroke-width="1.5"/>
+    <text x="135" y="104" text-anchor="middle" font-size="17" font-weight="600" fill="#04342c">PMSA003I</text>
+    <text x="135" y="124" text-anchor="middle" font-size="13" fill="#0f6e56">capteur de particules</text>
+    <g fill="#04342c" text-anchor="end">
+      <text x="218" y="165">VIN</text><text x="218" y="205">GND</text><text x="218" y="245">SDA</text><text x="218" y="285">SCL</text><text x="218" y="325">SET</text>
+    </g>
+    <!-- ESP -->
+    <rect x="355" y="40" width="190" height="350" rx="12" fill="#eeedfe" stroke="#534ab7" stroke-width="1.5"/>
+    <text x="450" y="74" text-anchor="middle" font-size="17" font-weight="600" fill="#26215c">ESP8266</text>
+    <text x="450" y="94" text-anchor="middle" font-size="13" fill="#534ab7">NodeMCU / D1 mini</text>
+    <g fill="#26215c">
+      <text x="368" y="165">3V3</text><text x="368" y="205">GND</text><text x="368" y="245">D2</text><text x="368" y="285">D1</text><text x="368" y="325">D5</text>
+    </g>
+    <g fill="#26215c" text-anchor="end">
+      <text x="532" y="165">3V3</text><text x="532" y="205">GND</text><text x="532" y="245">D6</text><text x="532" y="285">D7</text>
+    </g>
+    <text x="450" y="372" text-anchor="middle" font-size="13" fill="#534ab7">bouton FLASH = D3 · USB 5 V</text>
+    <!-- OLED -->
+    <rect x="670" y="120" width="190" height="240" rx="12" fill="#f1efe8" stroke="#5f5e5a" stroke-width="1.5"/>
+    <text x="765" y="154" text-anchor="middle" font-size="17" font-weight="600" fill="#2c2c2a">OLED 128×64</text>
+    <text x="765" y="174" text-anchor="middle" font-size="13" fill="#5f5e5a">SSD1306 · I2C 0x3C</text>
+    <g fill="#2c2c2a"><text x="683" y="205">VCC</text><text x="683" y="245">GND</text><text x="683" y="285">SDA</text><text x="683" y="325">SCL</text></g>
+  </g>
+  <!-- fils capteur -->
+  <g stroke-width="3" stroke-linecap="round" fill="none">
+    <line x1="230" y1="160" x2="355" y2="160" stroke="#e24b4a"/>
+    <line x1="230" y1="200" x2="355" y2="200" stroke="#444441"/>
+    <line x1="230" y1="240" x2="355" y2="240" stroke="#378add"/>
+    <line x1="230" y1="280" x2="355" y2="280" stroke="#ef9f27"/>
+    <line x1="230" y1="320" x2="355" y2="320" stroke="#7f77dd"/>
+  </g>
+  <!-- fils ecran -->
+  <g stroke-width="3" stroke-linecap="round" fill="none">
+    <polyline points="545,160 655,160 655,200 670,200" stroke="#e24b4a"/>
+    <polyline points="545,200 640,200 640,240 670,240" stroke="#444441"/>
+    <polyline points="545,240 625,240 625,280 670,280" stroke="#378add"/>
+    <polyline points="545,280 610,280 610,320 670,320" stroke="#ef9f27"/>
+  </g>
+  <!-- legende -->
+  <g font-size="13" fill="#444441">
+    <line x1="60" y1="412" x2="84" y2="412" stroke="#e24b4a" stroke-width="3"/><text x="92" y="417">3,3 V</text>
+    <line x1="160" y1="412" x2="184" y2="412" stroke="#444441" stroke-width="3"/><text x="192" y="417">GND</text>
+    <line x1="255" y1="412" x2="279" y2="412" stroke="#378add" stroke-width="3"/><text x="287" y="417">SDA (données)</text>
+    <line x1="410" y1="412" x2="434" y2="412" stroke="#ef9f27" stroke-width="3"/><text x="442" y="417">SCL (horloge)</text>
+    <line x1="560" y1="412" x2="584" y2="412" stroke="#7f77dd" stroke-width="3"/><text x="592" y="417">SET (veille du capteur)</text>
+  </g>
+</svg>
